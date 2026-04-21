@@ -1,0 +1,60 @@
+# Trading Bot Configuration
+
+# Exchange settings
+exchange:
+  name: okx
+  default_type: swap
+  leverage: 3
+  margin_mode: isolated
+
+# Trading pairs
+symbols:
+  - BTC/USDT:USDT
+  - ETH/USDT:USDT
+  - SOL/USDT:USDT
+  - XRP/USDT:USDT
+  - DOGE/USDT:USDT
+  - ADA/USDT:USDT
+  - AVAX/USDT:USDT
+  - LINK/USDT:USDT
+
+# Timeframe
+timeframe: 15m
+
+# Risk management
+risk:
+  max_position_pct: 0.10       # 10% of balance per trade
+  daily_loss_limit_pct: 0.03   # 3% daily loss circuit breaker
+  max_open_positions: 5
+  default_leverage: 3
+  stop_loss_pct: 0.02          # 2% stop loss
+  take_profit_pct: 0.04        # 4% take profit (2:1 R:R)
+
+# Mean Reversion strategy
+strategies:
+  mean_reversion:
+    bb_period: 20
+    bb_std: 2.0
+    rsi_period: 14
+    rsi_extreme_low: 25
+    rsi_extreme_high: 75
+
+  momentum:
+    ema_fast: 9
+    ema_slow: 21
+    rsi_period: 14
+    rsi_overbought: 70
+    rsi_oversold: 30
+    volume_mult: 1.5
+
+# Notifications
+notifications:
+  ntfy_topic: trading-bot-alerts
+  enabled: true
+
+# Logging
+logging:
+  level: INFO
+
+# Scan interval in seconds
+scan_interval: 60
