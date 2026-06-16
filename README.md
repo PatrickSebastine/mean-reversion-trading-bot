@@ -159,6 +159,10 @@ See [docs/BACKTEST_RESULTS.md](docs/BACKTEST_RESULTS.md) for detailed 7-day OKX 
 
 CCXT supports 100+ exchanges — most work out of the box with API key and secret.
 
+## Contributors
+
+Maintained by [Patrick Ugheoke Sebastine](https://github.com/PatrickSebastine). See [CONTRIBUTORS.md](CONTRIBUTORS.md) for the contribution guide. Issues and pull requests are welcome.
+
 ## License
 
 MIT License — see [LICENSE](LICENSE).
